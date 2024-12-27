@@ -11,22 +11,12 @@ announce_time_minutes: 15
 
 # Use /ah reload to reload config
 announce_message:
-  - "<dark_gray>»-------------------"
-  - "<white>Holy Hosting"
+  - "<dark_gray>»-----------------------"
+  - "<color:#F0C800><bold>       Holy Hosting"
   - ""
-  - "<wihte>Este servidor está patrocinado"
-  - "<white>por Holy Hosting"
+  - "<bold>Este servidor está patrocinado"
+  - "<white>por <color:#F0C800><bold>Holy Hosting"
+  - ""
   - "<gold>Consigue tu servidor en"
-  - "<red><bold><click:open_url:'https://www.holy.gg/minecraft'>holy.gg [Click Aqui]</click>"
-  - "<dark_gray>»-------------------"
-
-# Uncomment to use custom messages
-#announce_message:
-#  - "&8»-------------------"
-#  - "       Holy Hosting"
-#  - ""
-#  - "&lEste servidor está patrocinado"
-#  - "&fpor &e&lHoly Hosting"
-#  - "&eConsigue tu servidor en"
-#  - "&e&lholy.gg"
-#  - "&8»-------------------"
+  - "<gold><bold><click:open_url:'https://holy.gg/minecraft'>holy.gg/minecraft [Click Aqui]</click>"
+  - "<dark_gray>»-----------------------"

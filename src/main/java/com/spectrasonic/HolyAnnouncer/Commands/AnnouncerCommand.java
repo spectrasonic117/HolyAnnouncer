@@ -38,6 +38,11 @@ public class AnnouncerCommand implements CommandExecutor {
                 MessageUtils.sendMessage(sender, "Announcement sent successfully!");
                 return true;
 
+            case "version":
+                MessageUtils.sendMessage(sender, "HolyAnnouncer &dversion: &a" + plugin.getDescription().getVersion());
+                MessageUtils.sendMessage(sender, "Developed by: &c" + plugin.getDescription().getAuthors());
+                return true;
+
             default:
                 return false;
         }
