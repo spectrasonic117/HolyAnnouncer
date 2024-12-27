@@ -1,0 +1,11 @@
+announce_time_minutes: 15
+
+announce_message:
+  - "<dark_gray>»-------------------"
+  - "<white>Holy Hosting"
+  - ""
+  - "<wihte>Este servidor está patrocinado"
+  - "<white>por Holy Hosting"
+  - "<gold>Consigue tu servidor en"
+  - "<white>holy.gg"
+  - "<dark_gray>»-------------------"

@@ -1,0 +1,22 @@
+name: HolyAnnouncer
+version: '${version}'
+main: com.spectrasonic.HolyAnnouncer.Main
+api-version: '1.20'
+authors:
+  - Spectrasonic
+
+commands:
+  holyannouncer:
+    description: Main command for HolyAnnouncer
+    usage: /ha <reload|now>
+    permission: holyannouncer.command
+    aliases:
+      - ha
+
+permissions:
+  holyannouncer.reload:
+    description: Allows reloading the configuration
+    default: op
+  holyannouncer.now:
+    description: Allows sending announcement immediately
+    default: op
