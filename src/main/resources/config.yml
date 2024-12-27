@@ -1,5 +1,16 @@
+# HolyAnnouncer Configuration File
+
+# How to use MiniMessage:
+# https://docs.advntr.dev/minimessage/format.html
+
+# MiniMessage Playground;
+# https://webui.advntr.dev/
+
+
+# How many minutes to wait before sending announcement
 announce_time_minutes: 15
 
+# Use /ah reload to reload config
 announce_message:
   - "<dark_gray>»-------------------"
   - "<white>Holy Hosting"
