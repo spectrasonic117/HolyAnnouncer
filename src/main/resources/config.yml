@@ -6,7 +6,6 @@
 # MiniMessage Playground;
 # https://webui.advntr.dev/
 
-
 # How many minutes to wait before sending announcement
 announce_time_minutes: 15
 
@@ -18,5 +17,16 @@ announce_message:
   - "<wihte>Este servidor está patrocinado"
   - "<white>por Holy Hosting"
   - "<gold>Consigue tu servidor en"
-  - "<white>holy.gg"
+  - "<red><bold><click:open_url:'https://www.holy.gg/minecraft'>holy.gg [Click Aqui]</click>"
   - "<dark_gray>»-------------------"
+
+# Uncomment to use custom messages
+#announce_message:
+#  - "&8»-------------------"
+#  - "       Holy Hosting"
+#  - ""
+#  - "&lEste servidor está patrocinado"
+#  - "&fpor &e&lHoly Hosting"
+#  - "&eConsigue tu servidor en"
+#  - "&e&lholy.gg"
+#  - "&8»-------------------"

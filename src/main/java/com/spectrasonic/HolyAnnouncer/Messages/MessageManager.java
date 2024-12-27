@@ -1,18 +1,23 @@
 package com.spectrasonic.HolyAnnouncer.Messages;
 
+import net.kyori.adventure.platform.bukkit.BukkitAudiences;
+import net.kyori.adventure.text.Component;
+import net.kyori.adventure.text.minimessage.MiniMessage;
 import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import com.spectrasonic.HolyAnnouncer.Main;
-import net.md_5.bungee.api.chat.TextComponent;
 
 import java.util.List;
 
 public class MessageManager {
     private final Main plugin;
+    private final MiniMessage miniMessage;
+    private final BukkitAudiences adventure;
 
     public MessageManager(Main plugin) {
         this.plugin = plugin;
+        this.miniMessage = MiniMessage.miniMessage();
+        this.adventure = BukkitAudiences.create(plugin);
     }
 
     public void broadcastAnnouncement() {
@@ -21,16 +26,20 @@ public class MessageManager {
 
         for (Player player : Bukkit.getOnlinePlayers()) {
             for (String line : messages) {
-                String coloredMessage = ChatColor.translateAlternateColorCodes('&', line);
-                TextComponent message = new TextComponent(coloredMessage);
-                player.spigot().sendMessage(message);
+                Component message = miniMessage.deserialize(line);
+                adventure.player(player).sendMessage(message);
             }
         }
     }
 
     public void sendMessage(Player player, String message) {
-        String coloredMessage = ChatColor.translateAlternateColorCodes('&', message);
-        TextComponent textComponent = new TextComponent(coloredMessage);
-        player.spigot().sendMessage(textComponent);
+        Component parsedMessage = miniMessage.deserialize(message);
+        adventure.player(player).sendMessage(parsedMessage);
+    }
+
+    public void close() {
+        if (adventure != null) {
+            adventure.close();
+        }
     }
 }

@@ -32,6 +32,10 @@ public class Main extends JavaPlugin {
 
     @Override
     public void onDisable() {
+        if (adventure != null) {
+            adventure.close();
+        }
+
         if (announcementTask != null) {
             announcementTask.stopTask();
         }
