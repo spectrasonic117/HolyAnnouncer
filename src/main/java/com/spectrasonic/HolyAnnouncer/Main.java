@@ -28,6 +28,7 @@ public class Main extends JavaPlugin {
 
     public void registerCommands() {
         getCommand("holyannouncer").setExecutor(new AnnouncerCommand(this));
+        getCommand("holyannouncer").setTabCompleter(new AnnouncerCommand(this));
     }
 
     @Override

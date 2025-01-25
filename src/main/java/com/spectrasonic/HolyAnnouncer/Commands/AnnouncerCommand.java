@@ -2,12 +2,15 @@ package com.spectrasonic.HolyAnnouncer.Commands;
 
 import com.spectrasonic.HolyAnnouncer.Main;
 import com.spectrasonic.HolyAnnouncer.Utils.MessageUtils;
-
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.command.TabCompleter;
 
-public class AnnouncerCommand implements CommandExecutor {
+import java.util.ArrayList;
+import java.util.List;
+
+public class AnnouncerCommand implements CommandExecutor, TabCompleter {
     private final Main plugin;
 
     public AnnouncerCommand(Main plugin) {
@@ -46,5 +49,22 @@ public class AnnouncerCommand implements CommandExecutor {
             default:
                 return false;
         }
+    }
+
+    @Override
+    public List<String> onTabComplete(CommandSender sender, Command command, String alias, String[] args) {
+        List<String> completions = new ArrayList<>();
+
+        if (args.length == 1) {
+            if (sender.hasPermission("holyannouncer.reload")) {
+                completions.add("reload");
+            }
+            if (sender.hasPermission("holyannouncer.now")) {
+                completions.add("now");
+            }
+            completions.add("version");
+        }
+
+        return completions;
     }
 }
