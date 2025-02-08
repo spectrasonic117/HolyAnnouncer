@@ -1,4 +1,4 @@
-# Holy Announcer
+# HolyHosting Announcer
 
 Plugin de anuncio en el chat hecho para anunciar los servicios de Holy Hosting
 

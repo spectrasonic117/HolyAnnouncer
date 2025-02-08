@@ -19,4 +19,5 @@ announce_message:
     - ""
     - "<green>Consigue tu servidor en:"
     - "<gold><bold><click:open_url:'https://holy.gg/minecraft'>holy.gg/minecraft <- [Click]</click>"
+    - "<hover:show_text:'<red>Click para unirte'><click:OPEN_URL:'https://discord.gg/SdZV7kQqgm'><#F0C800><bold>HolyHosting <#99A0F2><bold>Discord</click></hover>"
     - "<dark_gray>»-----------------------"
